@@ -100,6 +100,10 @@ module.exports = {
         iosPathRegex: '\\.ios(.test)?.(ts|tsx)$',
       },
     ],
+    'no-irregular-whitespace': [
+      'error',
+      { skipStrings: true, skipRegExps: true, skipTemplates: true },
+    ],
   },
   settings: {
     react: {
