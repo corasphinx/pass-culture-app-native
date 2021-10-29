@@ -120,9 +120,9 @@ describe('<OfferIconCaptions />', () => {
       })
       await waitForExpect(() => {
         if (show === 'show') {
-          expect(component.queryByText(/À deux !/)).toBeTruthy()
+          expect(component.queryByText(/À deux !/)).toBeTruthy()
         } else {
-          expect(component.queryByText(/À deux !/)).toBeNull()
+          expect(component.queryByText(/À deux !/)).toBeNull()
         }
       })
     }

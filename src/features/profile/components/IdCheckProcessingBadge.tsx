@@ -21,7 +21,7 @@ const formatDateToLastUpdatedAtMessage = (lastUpdatedDate: Date | undefined) =>
           day: formatToSlashedFrenchDate(new Date(lastUpdatedDate).toISOString()),
           hour: formatToHour(new Date(lastUpdatedDate)),
         },
-        message: 'Dossier mis à jour le : {day} à {hour}',
+        message: 'Dossier mis à jour le : {day} à {hour}',
       })
     : undefined
 
@@ -47,7 +47,7 @@ export function IdCheckProcessingBadge(props: IdCheckProcessingBadgeProps) {
         callToActionLink={props.subscriptionMessage?.callToAction?.callToActionLink}
         message={
           props.subscriptionMessage?.userMessage ||
-          t`Dossier déposé, nous avons bien reçu ton dossier et sommes en train de l’analyser !`
+          t`Dossier déposé, nous avons bien reçu ton dossier et sommes en train de l’analyser !`
         }
       />
     </React.Fragment>

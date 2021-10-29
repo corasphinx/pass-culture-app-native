@@ -208,7 +208,7 @@ Array [
                 }
               >
                 <View
-                  accessibilityLabel="Pourquoi ?"
+                  accessibilityLabel="Pourquoi ?"
                   accessible={true}
                   focusable={true}
                   onClick={[Function]}
@@ -236,7 +236,7 @@ Array [
                       "width": "100%",
                     }
                   }
-                  testID="Pourquoi ?"
+                  testID="Pourquoi ?"
                 >
                   <Text
                     adjustsFontSizeToFit={false}
@@ -255,7 +255,7 @@ Array [
                     }
                     textColor="#eb0055"
                   >
-                    Pourquoi ?
+                    Pourquoi ?
                   </Text>
                 </View>
                 <View
@@ -677,7 +677,7 @@ Array [
               ]
             }
           >
-            Pourquoi ?
+            Pourquoi ?
           </Text>
           <View
             accessibilityLabel="Fermer la modale"
@@ -997,7 +997,7 @@ exports[`SetBirthday Page should render properly 1`] = `
               }
             >
               <View
-                accessibilityLabel="Pourquoi ?"
+                accessibilityLabel="Pourquoi ?"
                 accessible={true}
                 focusable={true}
                 onClick={[Function]}
@@ -1025,7 +1025,7 @@ exports[`SetBirthday Page should render properly 1`] = `
                     "width": "100%",
                   }
                 }
-                testID="Pourquoi ?"
+                testID="Pourquoi ?"
               >
                 <Text
                   adjustsFontSizeToFit={false}
@@ -1044,7 +1044,7 @@ exports[`SetBirthday Page should render properly 1`] = `
                   }
                   textColor="#eb0055"
                 >
-                  Pourquoi ?
+                  Pourquoi ?
                 </Text>
               </View>
               <View

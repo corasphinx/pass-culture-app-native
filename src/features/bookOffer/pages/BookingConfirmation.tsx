@@ -47,14 +47,14 @@ export function BookingConfirmation() {
 
   return (
     <GenericInfoPage
-      title={t`Réservation confirmée !`}
+      title={t`Réservation confirmée !`}
       icon={TicketBooked}
       iconSize={getSpacing(65)}>
       <StyledBody>
         {t({
           id: 'credit left to spend',
           values: { credit: formatToFrenchDecimal(amountLeft) },
-          message: 'Il te reste encore {credit} à dépenser sur le pass !',
+          message: 'Il te reste encore {credit} à dépenser sur le pass !',
         })}
       </StyledBody>
       <Spacer.Column numberOfSpaces={4} />

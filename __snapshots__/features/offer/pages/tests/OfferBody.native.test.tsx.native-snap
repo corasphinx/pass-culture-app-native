@@ -407,7 +407,7 @@ exports[`<OfferBody /> should open the report modal upon clicking on 'signaler l
           }
           testID="caption-iconDuo"
         >
-          À deux !
+          À deux !
         </Text>
       </View>
       <View
@@ -642,7 +642,7 @@ exports[`<OfferBody /> should open the report modal upon clicking on 'signaler l
           ]
         }
       >
-        Quand ?
+        Quand ?
       </Text>
       <Text
         style={
@@ -702,7 +702,7 @@ exports[`<OfferBody /> should open the report modal upon clicking on 'signaler l
           ]
         }
       >
-        Où ?
+        Où ?
       </Text>
       <View
         numberOfSpaces={4}

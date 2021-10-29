@@ -44,7 +44,7 @@ export const SelectSchool = () => {
       <Spacer.TopScreen />
       <Spacer.Column numberOfSpaces={18} />
       <Container>
-        <TitleContainer>{t`Vois-tu ton établissement ?`}</TitleContainer>
+        <TitleContainer>{t`Vois-tu ton établissement ?`}</TitleContainer>
         <Spacer.Column numberOfSpaces={6} />
         {Object.keys(eligibleSchools).map((academy) => (
           <React.Fragment key={academy}>

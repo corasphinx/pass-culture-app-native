@@ -46,7 +46,7 @@ const openExternalUrl = async (
 
 const showAlert = (url: string) => {
   const alertTitle = t`Problème technique ;(`
-  const alertMessage = t`Nous n'arrivons pas à ouvrir ce lien : ${url}`
+  const alertMessage = t`Nous n'arrivons pas à ouvrir ce lien : ${url}`
   const alertButtons = undefined
   const alertAndroidOptions = { cancelable: true }
   Alert.alert(alertTitle, alertMessage, alertButtons, alertAndroidOptions)

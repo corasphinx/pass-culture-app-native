@@ -244,7 +244,7 @@ export const SetPhoneValidationCode = memo(({ route }: SetPhoneValidationCodePro
           />
           <Spacer.Column numberOfSpaces={4} />
           <HelpRow>
-            <Typo.Body>{t`Tu n'as pas reçu le sms ?`}</Typo.Body>
+            <Typo.Body>{t`Tu n'as pas reçu le sms ?`}</Typo.Body>
             {/* force button to wrap on small screen, otherwise timer will "unwrap" when timer is under 10 seconds */}
             {appContentWidth <= 320 ? <Break /> : null}
             <ButtonTertiary

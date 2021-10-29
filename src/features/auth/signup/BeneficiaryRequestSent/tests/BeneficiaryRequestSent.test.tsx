@@ -47,7 +47,7 @@ describe('<BeneficiaryRequestSent />', () => {
   it('should redirect to cultural survey page WHEN "On y va !" button is clicked', async () => {
     const { findByText } = render(<BeneficiaryRequestSent />)
 
-    fireEvent.press(await findByText('On y va !'))
+    fireEvent.press(await findByText('On y va !'))
 
     expect(navigateToHome).not.toBeCalled()
     expect(navigate).toBeCalledTimes(1)
@@ -61,7 +61,7 @@ describe('<BeneficiaryRequestSent />', () => {
     } as UseQueryResult<UserProfileResponse>)
     const { findByText } = render(<BeneficiaryRequestSent />)
 
-    fireEvent.press(await findByText('On y va !'))
+    fireEvent.press(await findByText('On y va !'))
 
     expect(navigateToHome).toBeCalledTimes(1)
     expect(navigate).not.toBeCalledWith('CulturalSurvey')
@@ -74,7 +74,7 @@ describe('<BeneficiaryRequestSent />', () => {
     } as UseQueryResult<UserProfileResponse>)
     const { findByText } = render(<BeneficiaryRequestSent />)
 
-    fireEvent.press(await findByText('On y va !'))
+    fireEvent.press(await findByText('On y va !'))
 
     expect(navigateToHome).toBeCalledTimes(1)
     expect(navigate).not.toBeCalledWith('CulturalSurvey')
@@ -96,7 +96,7 @@ describe('<BeneficiaryRequestSent />', () => {
     const { getByText } = render(<BeneficiaryRequestSent />)
     expect(
       getByText(
-        "Tu recevras une réponse par e-mail sous 5 jours ouvrés. En attendant, tu peux découvrir l'application !"
+        "Tu recevras une réponse par e-mail sous 5 jours ouvrés. En attendant, tu peux découvrir l'application !"
       )
     ).toBeDefined()
   })
@@ -116,7 +116,7 @@ describe('<BeneficiaryRequestSent />', () => {
     const { getByText } = render(<BeneficiaryRequestSent />)
     expect(
       getByText(
-        'Tu recevras une réponse par e-mail sous 5 jours ouvrés. En attendant, aide-nous à en savoir plus sur tes pratiques culturelles !'
+        'Tu recevras une réponse par e-mail sous 5 jours ouvrés. En attendant, aide-nous à en savoir plus sur tes pratiques culturelles !'
       )
     ).toBeDefined()
   })

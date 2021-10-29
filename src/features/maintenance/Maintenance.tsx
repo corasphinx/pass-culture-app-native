@@ -19,7 +19,7 @@ export const Maintenance = () => {
         icon={MaintenanceCone}
         iconSize={getSpacing(40)}>
         <Spacer.Column numberOfSpaces={6} />
-        <StyledBody>{t`L’application est actuellement en maintenance, mais sera à nouveau en ligne rapidement !`}</StyledBody>
+        <StyledBody>{t`L’application est actuellement en maintenance, mais sera à nouveau en ligne rapidement !`}</StyledBody>
         <Spacer.Column numberOfSpaces={24} />
         <LogoPassCulture />
       </GenericInfoPage>

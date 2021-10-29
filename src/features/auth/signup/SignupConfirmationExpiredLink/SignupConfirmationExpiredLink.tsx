@@ -45,10 +45,10 @@ export function SignupConfirmationExpiredLink(props: Props) {
 
   return (
     <GenericInfoPage title={t`Oups`} icon={SadFace}>
-      <StyledBody>{t`Le lien est expiré !`}</StyledBody>
-      <StyledBody>{t`Clique sur « Renvoyer l’e-mail » pour recevoir un nouveau lien.`}</StyledBody>
+      <StyledBody>{t`Le lien est expiré !`}</StyledBody>
+      <StyledBody>{t`Clique sur « Renvoyer l’e-mail » pour recevoir un nouveau lien.`}</StyledBody>
       <Spacer.Column numberOfSpaces={4} />
-      <StyledBody>{t`Si tu as besoin d’aide n’hésite pas à :`}</StyledBody>
+      <StyledBody>{t`Si tu as besoin d’aide n’hésite pas à :`}</StyledBody>
       <Spacer.Column numberOfSpaces={4} />
       {/*<ButtonTertiaryWhite*/}
       {/*  title={t`Contacter le support`}*/}

@@ -98,7 +98,7 @@ describe('AcceptCgu Page', () => {
     fireEvent.press(renderAPI.getByText('Accepter et s’inscrire'))
 
     expect(recaptchaWebviewModal.props.visible).toBeFalsy()
-    expect(renderAPI.queryByText('Hors connexion : en attente du réseau.')).toBeTruthy()
+    expect(renderAPI.queryByText('Hors connexion : en attente du réseau.')).toBeTruthy()
     expect(renderAPI.queryByTestId('button-isloading-icon')).toBeFalsy()
   })
 
@@ -239,7 +239,7 @@ describe('AcceptCgu Page', () => {
     const rightIcon = getByTestId('rightIcon')
     fireEvent.press(rightIcon)
 
-    const title = queryByText("Veux-tu abandonner l'inscription ?")
+    const title = queryByText("Veux-tu abandonner l'inscription ?")
     expect(title).toBeTruthy()
   })
 

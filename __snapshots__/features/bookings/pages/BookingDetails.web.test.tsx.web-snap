@@ -274,7 +274,7 @@ Object {
               dir="auto"
               style="color: rgb(98, 98, 98); font-family: Montserrat-SemiBold; font-size: 12px; line-height: 16px; text-align: center;"
             >
-              Tu ne peux plus annuler ta réservation : elle devait être annulée avant le 15 mars 2021
+              Tu ne peux plus annuler ta réservation : elle devait être annulée avant le 15 mars 2021
             </div>
           </div>
           <div
@@ -937,7 +937,7 @@ Object {
             dir="auto"
             style="color: rgb(98, 98, 98); font-family: Montserrat-SemiBold; font-size: 12px; line-height: 16px; text-align: center;"
           >
-            Tu ne peux plus annuler ta réservation : elle devait être annulée avant le 15 mars 2021
+            Tu ne peux plus annuler ta réservation : elle devait être annulée avant le 15 mars 2021
           </div>
         </div>
         <div

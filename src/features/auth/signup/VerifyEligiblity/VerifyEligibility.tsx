@@ -24,7 +24,7 @@ export const VerifyEligibility: FunctionComponent<Props> = ({ route }) => {
   }
   return (
     <GenericInfoPage
-      title={t`Plus que quelques étapes !`}
+      title={t`Plus que quelques étapes !`}
       icon={HappyFaceStars}
       iconSize={getSpacing(65)}>
       <StyledBody>

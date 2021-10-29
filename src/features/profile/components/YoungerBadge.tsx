@@ -10,7 +10,7 @@ export function YoungerBadge() {
   const deposit = depositAmount.replace(' ', '')
 
   const information =
-    t`Patience ! À tes 18 ans, tu bénéficieras de` +
+    t`Patience ! À tes 18 ans, tu bénéficieras de` +
     '\u00a0' +
     deposit +
     '\u00a0' +

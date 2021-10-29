@@ -22,7 +22,7 @@ export const ResetPasswordEmailSent: FunctionComponent<Props> = ({ route }) => {
   return (
     <BottomContentPage>
       <ModalHeader
-        title={t`E-mail envoyé !`}
+        title={t`E-mail envoyé !`}
         leftIconAccessibilityLabel={t`Revenir en arrière`}
         leftIcon={ArrowPrevious}
         onLeftIconPress={goBack}
@@ -32,12 +32,12 @@ export const ResetPasswordEmailSent: FunctionComponent<Props> = ({ route }) => {
       />
       <ModalContent>
         <Description>
-          <Typo.Body>{t`Clique sur le lien reçu à l'adresse :`}</Typo.Body>
+          <Typo.Body>{t`Clique sur le lien reçu à l'adresse :`}</Typo.Body>
           <Typo.Body>{route.params.email}</Typo.Body>
           <Spacer.Column numberOfSpaces={5} />
           <CenteredText>
             <Typo.Body>
-              {t`L'e-mail peut prendre quelques minutes à arriver. Pense à vérifier tes spams !`}
+              {t`L'e-mail peut prendre quelques minutes à arriver. Pense à vérifier tes spams !`}
             </Typo.Body>
           </CenteredText>
           <Spacer.Column numberOfSpaces={5} />

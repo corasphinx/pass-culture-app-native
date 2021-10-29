@@ -20,7 +20,7 @@ Dans le repo [**id-check-front**](https://github.com/pass-culture/id-check-front
 
 1. `git checkout master`
 1. Ouvrir les 4 `package.json`, et bumper la version dans les 4 fichiers en suivant la convention [**semver**](https://semver.org/).
-1. Commiter les 4 `package.json` avec le message suivant : `"bump version to X.X.X"`
+1. Commiter les 4 `package.json` avec le message suivant : `"bump version to X.X.X"`
 1. `git tag vX.X.X`
 1. `git push origin vX.X.X`
 1. `cd packages/id-check`

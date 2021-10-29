@@ -90,7 +90,7 @@ exports[`<AccountCreated /> should render correctly 1`] = `
           ]
         }
       >
-        Ton compte a été activé !
+        Ton compte a été activé !
       </Text>
       <View
         numberOfSpaces={5}
@@ -116,7 +116,7 @@ exports[`<AccountCreated /> should render correctly 1`] = `
           ]
         }
       >
-        Aide-nous à en savoir plus sur tes pratiques culturelles ! Ta sélection n'aura pas d'impact sur les offres proposées.
+        Aide-nous à en savoir plus sur tes pratiques culturelles ! Ta sélection n'aura pas d'impact sur les offres proposées.
       </Text>
       <View
         numberOfSpaces={15}
@@ -129,7 +129,7 @@ exports[`<AccountCreated /> should render correctly 1`] = `
         }
       />
       <View
-        accessibilityLabel="On y va !"
+        accessibilityLabel="On y va !"
         accessible={true}
         focusable={true}
         onClick={[Function]}
@@ -157,7 +157,7 @@ exports[`<AccountCreated /> should render correctly 1`] = `
             "width": "100%",
           }
         }
-        testID="On y va !"
+        testID="On y va !"
       >
         <Text
           adjustsFontSizeToFit={false}
@@ -176,7 +176,7 @@ exports[`<AccountCreated /> should render correctly 1`] = `
           }
           textColor="#eb0055"
         >
-          On y va !
+          On y va !
         </Text>
       </View>
       <View

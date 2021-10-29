@@ -50,7 +50,7 @@ describe('useItinerary', () => {
     result.current.navigateTo({ latitude: 48.85837, longitude: 2.294481 })
     expect(alertMock).toHaveBeenCalledWith(
       "Voir l'itinéraire",
-      "Choisissez l'application pour vous rendre sur le lieu de l'offre :",
+      "Choisissez l'application pour vous rendre sur le lieu de l'offre :",
       [
         { text: 'Sygic', onPress: expect.any(Function) },
         { text: 'Waze', onPress: expect.any(Function) },
@@ -76,7 +76,7 @@ describe('useItinerary', () => {
     result.current.navigateTo({ latitude: 48.85837, longitude: 2.294481 })
     expect(alertMock).toHaveBeenCalledWith(
       "Voir l'itinéraire",
-      "Choisissez l'application pour vous rendre sur le lieu de l'offre :",
+      "Choisissez l'application pour vous rendre sur le lieu de l'offre :",
       [
         { text: 'Sygic', onPress: expect.any(Function) },
         { text: 'Waze', onPress: expect.any(Function) },
@@ -150,7 +150,7 @@ describe('useItinerary', () => {
     result.current.navigateTo({ latitude: 48.85837, longitude: 2.294481 })
     expect(alertMock).toHaveBeenCalledWith(
       "Voir l'itinéraire",
-      "Choisissez l'application pour vous rendre sur le lieu de l'offre :",
+      "Choisissez l'application pour vous rendre sur le lieu de l'offre :",
       [
         { text: 'Sygic', onPress: expect.any(Function) },
         { text: 'Waze', onPress: expect.any(Function) },

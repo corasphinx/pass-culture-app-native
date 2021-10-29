@@ -44,7 +44,7 @@ describe('<SetEmail />', () => {
     const rightIcon = getByTestId('rightIcon')
     fireEvent.press(rightIcon)
 
-    const title = queryByText("Veux-tu abandonner l'inscription ?")
+    const title = queryByText("Veux-tu abandonner l'inscription ?")
     expect(title).toBeTruthy()
   })
 

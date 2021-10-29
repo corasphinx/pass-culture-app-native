@@ -62,7 +62,7 @@ export const AsyncErrorBoundaryWithoutNavigation = ({
       <BrokenConnection />
       <Spacer.Column numberOfSpaces={2} />
 
-      <Typo.Title1 color={ColorsEnum.WHITE}>{t`Oups !`}</Typo.Title1>
+      <Typo.Title1 color={ColorsEnum.WHITE}>{t`Oups !`}</Typo.Title1>
       <Spacer.Column numberOfSpaces={4} />
 
       <Row>

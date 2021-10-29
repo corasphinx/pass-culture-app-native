@@ -28,7 +28,7 @@ export const SelectSchoolHome = () => {
         <StyledLottieContainer>
           <LottieView ref={animation} source={StarAnimation} loop={false} autoSize={true} />
         </StyledLottieContainer>
-        <TitleContainer>{t`Fais-tu partie de la phase de test ?`}</TitleContainer>
+        <TitleContainer>{t`Fais-tu partie de la phase de test ?`}</TitleContainer>
         <BodyContainer>
           {t`Si tu es élève dans` + '\u00a0'}
           <Strong>{t`l'un des 22 établissements de test`}</Strong>

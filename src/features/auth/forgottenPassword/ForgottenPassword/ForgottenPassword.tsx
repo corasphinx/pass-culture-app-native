@@ -36,7 +36,7 @@ export const ForgottenPassword: FunctionComponent = () => {
 
   useEffect(() => {
     if (!networkInfo.isConnected) {
-      setErrorMessage(t`Hors connexion : en attente du réseau.`)
+      setErrorMessage(t`Hors connexion : en attente du réseau.`)
       setIsDoingReCaptchaChallenge(false)
     } else {
       setErrorMessage(null)
@@ -78,7 +78,7 @@ export const ForgottenPassword: FunctionComponent = () => {
       return
     }
     if (!networkInfo.isConnected) {
-      setErrorMessage(t`Hors connexion : en attente du réseau.`)
+      setErrorMessage(t`Hors connexion : en attente du réseau.`)
       return
     }
     setIsDoingReCaptchaChallenge(true)
@@ -128,7 +128,7 @@ export const ForgottenPassword: FunctionComponent = () => {
       <ModalContent>
         <CenteredText>
           <Typo.Body>
-            {t`Saisis ton adresse e-mail pour recevoir un lien qui te permettra de réinitialiser ton mot de passe !`}
+            {t`Saisis ton adresse e-mail pour recevoir un lien qui te permettra de réinitialiser ton mot de passe !`}
           </Typo.Body>
         </CenteredText>
         <Spacer.Column numberOfSpaces={4} />

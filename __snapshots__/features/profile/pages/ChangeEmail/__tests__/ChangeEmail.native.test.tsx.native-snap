@@ -54,7 +54,7 @@ Array [
           ]
         }
       >
-        Pour plus de sécurité, saisis ton mot de passe ! Tu recevras un e-mail sur ta nouvelle adresse avec un lien à activer pour confirmer la modification.
+        Pour plus de sécurité, saisis ton mot de passe ! Tu recevras un e-mail sur ta nouvelle adresse avec un lien à activer pour confirmer la modification.
       </Text>
       <View
         numberOfSpaces={4}

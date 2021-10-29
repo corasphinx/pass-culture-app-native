@@ -51,7 +51,7 @@ export const DeeplinkImporter: FunctionComponent = () => {
         />
         <ModalContent>
           <StyledInput>
-            <Typo.Body>{t`Un lien ne fonctionne pas ?`}</Typo.Body>
+            <Typo.Body>{t`Un lien ne fonctionne pas ?`}</Typo.Body>
             <Spacer.Column numberOfSpaces={2} />
             <TextInput
               autoFocus={true}

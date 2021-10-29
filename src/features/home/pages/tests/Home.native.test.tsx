@@ -60,8 +60,8 @@ describe('Home component', () => {
 
   it('should have a welcome message', async () => {
     const { getByText } = await homeRenderer({ isLoggedIn: false })
-    const welcomeText = getByText('Bienvenue !')
-    expect(welcomeText.props.children).toBe('Bienvenue !')
+    const welcomeText = getByText('Bienvenue !')
+    expect(welcomeText.props.children).toBe('Bienvenue !')
   })
 
   it('should have a personalized welcome message when user is logged in', async () => {

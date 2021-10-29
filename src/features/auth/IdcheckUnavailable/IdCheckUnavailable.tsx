@@ -25,7 +25,7 @@ export function IdCheckUnavailable() {
       <Spacer.Column numberOfSpaces={6} />
       {!!settings?.displayDmsRedirection && (
         <React.Fragment>
-          <StyledBody>{t`Cependant, tu peux nous transmettre ton dossier via la plateforme Démarches Simplifiées, et on reviendra vers toi d'ici quelques jours au plus tard :`}</StyledBody>
+          <StyledBody>{t`Cependant, tu peux nous transmettre ton dossier via la plateforme Démarches Simplifiées, et on reviendra vers toi d'ici quelques jours au plus tard :`}</StyledBody>
           <Spacer.Column numberOfSpaces={8} />
           <ButtonPrimaryWhite
             title={t`Transmettre un dossier`}

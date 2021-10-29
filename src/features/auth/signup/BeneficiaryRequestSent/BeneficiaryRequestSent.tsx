@@ -30,22 +30,22 @@ export function BeneficiaryRequestSent() {
 
   let body = t`Tu recevras un e-mail lorsque ta demande sera validée.`
   if (shouldNavigateToCulturalSurvey) {
-    body = t`Tu recevras un e-mail lorsque ta demande sera validée. En attendant, aide-nous à en savoir plus sur tes pratiques culturelles !`
+    body = t`Tu recevras un e-mail lorsque ta demande sera validée. En attendant, aide-nous à en savoir plus sur tes pratiques culturelles !`
   }
 
   if (settings?.enableIdCheckRetention) {
-    body = t`Tu recevras une réponse par e-mail sous 5 jours ouvrés. En attendant, tu peux découvrir l'application !`
+    body = t`Tu recevras une réponse par e-mail sous 5 jours ouvrés. En attendant, tu peux découvrir l'application !`
     if (shouldNavigateToCulturalSurvey) {
-      body = t`Tu recevras une réponse par e-mail sous 5 jours ouvrés. En attendant, aide-nous à en savoir plus sur tes pratiques culturelles !`
+      body = t`Tu recevras une réponse par e-mail sous 5 jours ouvrés. En attendant, aide-nous à en savoir plus sur tes pratiques culturelles !`
     }
   }
 
   return (
-    <GenericInfoPage title={t`Demande envoyée !`} icon={RequestSent} iconSize={getSpacing(42)}>
+    <GenericInfoPage title={t`Demande envoyée !`} icon={RequestSent} iconSize={getSpacing(42)}>
       <StyledBody>{t`Nous étudions ton dossier...`}</StyledBody>
       <StyledBody>{body}</StyledBody>
       <Spacer.Column numberOfSpaces={15} />
-      <ButtonPrimaryWhite title={t`On y va !`} onPress={onPress} />
+      <ButtonPrimaryWhite title={t`On y va !`} onPress={onPress} />
     </GenericInfoPage>
   )
 }

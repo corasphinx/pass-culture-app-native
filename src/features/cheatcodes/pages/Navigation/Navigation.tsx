@@ -126,7 +126,7 @@ export function Navigation(): JSX.Element {
         </Row>
         <Row half>
           <NavigationButton
-            title={'Signup : email envoyé'}
+            title={'Signup : email envoyé'}
             onPress={() =>
               navigate('SignupConfirmationEmailSent', {
                 email: 'jean.dupont@gmail.com',
@@ -156,7 +156,7 @@ export function Navigation(): JSX.Element {
         </Row>
         <Row half>
           <NavigationButton
-            title={'Signup : Validate Email'}
+            title={'Signup : Validate Email'}
             onPress={() =>
               navigate('AfterSignupEmailValidationBuffer', {
                 token: 'whichTokenDoYouWantReally',

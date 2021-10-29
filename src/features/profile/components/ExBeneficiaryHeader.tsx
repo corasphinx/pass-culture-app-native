@@ -43,18 +43,18 @@ export function ExBeneficiaryHeader(props: ExBeneficiaryHeaderProps) {
       <Spacer.Column numberOfSpaces={6} />
       <DescriptionContainer>
         <AccordionItem
-          title={<Typo.ButtonText>{t`Mon crédit est expiré, que faire ?`}</Typo.ButtonText>}
+          title={<Typo.ButtonText>{t`Mon crédit est expiré, que faire ?`}</Typo.ButtonText>}
           titleStyle={accordionStyle.title}
           bodyStyle={accordionStyle.body}>
           <Description>
-            {t`Ton crédit pass Culture est arrivé à expiration mais l’aventure continue !`}
+            {t`Ton crédit pass Culture est arrivé à expiration mais l’aventure continue !`}
           </Description>
           <Spacer.Column numberOfSpaces={5} />
           <Description>
             {t`Tu peux toujours réserver les offres gratuites exclusives au pass Culture.`}
           </Description>
           <Description>
-            {t`Tu peux aussi découvrir les autres activités culturelles sur l'application mais leur réservation s'effectuera sur les sites de nos partenaires !`}
+            {t`Tu peux aussi découvrir les autres activités culturelles sur l'application mais leur réservation s'effectuera sur les sites de nos partenaires !`}
           </Description>
         </AccordionItem>
         <Spacer.Column numberOfSpaces={2} />

@@ -26,7 +26,7 @@ export const HomeHeader: FunctionComponent = function () {
         values: { name: userInfos?.firstName },
         message: 'Bonjour {name}',
       })
-    : t`Bienvenue !`
+    : t`Bienvenue !`
 
   let subtitle = t`Toute la culture à portée de main`
   if (userInfos?.isBeneficiary && availableCredit) {

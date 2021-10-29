@@ -49,7 +49,7 @@ export const AcceptCgu: FC<Props> = ({ route }) => {
 
   useEffect(() => {
     if (!networkInfo.isConnected) {
-      setErrorMessage(t`Hors connexion : en attente du réseau.`)
+      setErrorMessage(t`Hors connexion : en attente du réseau.`)
       setIsDoingReCaptchaChallenge(false)
     } else {
       setErrorMessage(null)
@@ -174,7 +174,7 @@ export const AcceptCgu: FC<Props> = ({ route }) => {
             <Spacer.Column numberOfSpaces={5} />
             <Paragraphe>
               <Typo.Body>
-                {t`Pour en savoir plus sur la gestion de tes données personnelles et exercer tes droits tu peux :`}
+                {t`Pour en savoir plus sur la gestion de tes données personnelles et exercer tes droits tu peux :`}
               </Typo.Body>
             </Paragraphe>
             <ButtonTertiary

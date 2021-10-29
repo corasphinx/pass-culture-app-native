@@ -35,7 +35,7 @@ describe('<ReportOfferOtherReason />', () => {
       expect(reportButton.props.style.backgroundColor).toEqual(ColorsEnum.GREY_LIGHT)
 
       const largeTextInput = getByTestId('large-text-input')
-      fireEvent.changeText(largeTextInput, 'Hello !')
+      fireEvent.changeText(largeTextInput, 'Hello !')
 
       await waitForExpect(() => {
         expect(reportButton.props.style.backgroundColor).toEqual(ColorsEnum.PRIMARY)

@@ -141,9 +141,9 @@ describe('<BookingDetails />', () => {
   it.each`
     code                     | message
     ${undefined}             | ${'En raison d’une erreur technique, l’offre n’a pas pu être réservée'}
-    ${'INSUFFICIENT_CREDIT'} | ${'Attention, ton crédit est insuffisant pour pouvoir réserver cette offre !'}
-    ${'ALREADY_BOOKED'}      | ${'Attention, il est impossible de réserver plusieurs fois la même offre !'}
-    ${'STOCK_NOT_BOOKABLE'}  | ${'Oups, cette offre n’est plus disponible !'}
+    ${'INSUFFICIENT_CREDIT'} | ${'Attention, ton crédit est insuffisant pour pouvoir réserver cette offre !'}
+    ${'ALREADY_BOOKED'}      | ${'Attention, il est impossible de réserver plusieurs fois la même offre !'}
+    ${'STOCK_NOT_BOOKABLE'}  | ${'Oups, cette offre n’est plus disponible !'}
   `(
     'should show the error snackbar with message="$message" for errorCode="$code" if booking an offer fails',
     async ({ code, message }: { code: string | undefined; message: string }) => {

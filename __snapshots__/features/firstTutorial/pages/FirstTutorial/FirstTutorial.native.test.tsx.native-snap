@@ -699,7 +699,7 @@ Array [
                       ]
                     }
                   >
-                    à portée de main !
+                    à portée de main !
                   </Text>
                   <View
                     flex={0.5}
@@ -905,7 +905,7 @@ Array [
                       ]
                     }
                   >
-                    Nos nombreux partenaires ajoutent de nouvelles offres quotidiennement. Découvre les dès maintenant !
+                    Nos nombreux partenaires ajoutent de nouvelles offres quotidiennement. Découvre les dès maintenant !
                   </Text>
                   <View
                     flex={2}

@@ -170,7 +170,7 @@ export const Profile: React.FC = () => {
         </ProfileSection>
         <ProfileSection title={t`Aides`}>
           <Row
-            title={t`Comment ça marche ?`}
+            title={t`Comment ça marche ?`}
             type="navigable"
             onPress={() => navigate('FirstTutorial', { shouldCloseAppOnBackAction: false })}
             icon={LifeBuoy}
@@ -185,7 +185,7 @@ export const Profile: React.FC = () => {
           />
           {Platform.OS !== 'web' && (
             <Row
-              title={t`Problèmes pour ouvrir un lien ?`}
+              title={t`Problèmes pour ouvrir un lien ?`}
               type="navigable"
               onPress={() => navigate('DeeplinkImporter')}
               icon={LifeBuoy}

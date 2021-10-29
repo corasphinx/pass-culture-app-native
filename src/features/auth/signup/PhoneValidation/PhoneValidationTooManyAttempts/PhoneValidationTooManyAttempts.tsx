@@ -13,9 +13,9 @@ import { ColorsEnum, Spacer, Typo } from 'ui/theme'
 
 export function PhoneValidationTooManyAttempts() {
   return (
-    <GenericInfoPage title={t`Trop de tentatives !`} icon={AccountLocked}>
+    <GenericInfoPage title={t`Trop de tentatives !`} icon={AccountLocked}>
       <StyledBody>
-        {t`Tu as dépassé le nombre d’essais autorisés. L’accès à ton crédit pass Culture a été bloqué. Pour le récupérer tu peux :`}
+        {t`Tu as dépassé le nombre d’essais autorisés. L’accès à ton crédit pass Culture a été bloqué. Pour le récupérer tu peux :`}
       </StyledBody>
       <Spacer.Column numberOfSpaces={7} />
       <ButtonTertiaryWhite

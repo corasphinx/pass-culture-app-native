@@ -169,7 +169,7 @@ export const SetBirthday: FunctionComponent<Props> = ({ route }) => {
         />
         <BottomCardContentContainer>
           <InnerContainer>
-            <ButtonTertiary title={t`Pourquoi ?`} onPress={onPressWhy} />
+            <ButtonTertiary title={t`Pourquoi ?`} onPress={onPressWhy} />
             <Spacer.Column numberOfSpaces={10} />
             <DateInputContainer>
               <DateInput
@@ -197,7 +197,7 @@ export const SetBirthday: FunctionComponent<Props> = ({ route }) => {
         </BottomCardContentContainer>
       </BottomContentPage>
       <AppInformationModal
-        title="Pourquoi ?"
+        title="Pourquoi ?"
         visible={informationModalVisible}
         onCloseIconPress={hideInformationModal}
         testIdSuffix="birthday-information">

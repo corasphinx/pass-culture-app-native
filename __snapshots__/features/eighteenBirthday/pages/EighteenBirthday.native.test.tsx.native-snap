@@ -207,7 +207,7 @@ Array [
                       ]
                     }
                   >
-                    Bonne nouvelle !
+                    Bonne nouvelle !
                   </Text>
                   <Text
                     fontSize={24}

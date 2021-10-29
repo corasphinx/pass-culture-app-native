@@ -137,7 +137,7 @@ export const routes: Route[] = [
     name: 'AccountCreated',
     component: AccountCreated,
     path: 'creation-compte/confirmation',
-    options: { title: t`Compte créé !` },
+    options: { title: t`Compte créé !` },
   },
   {
     name: 'AfterSignupEmailValidationBuffer',

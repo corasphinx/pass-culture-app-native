@@ -67,7 +67,7 @@ describe('<EighteenBirthdayCard />', () => {
       expect(navigate).toBeCalledWith('Login')
     })
     expect(mockShowInfoSnackBar).toBeCalledWith({
-      message: `Tu n'es pas connecté !`,
+      message: `Tu n'es pas connecté !`,
     })
   })
 })

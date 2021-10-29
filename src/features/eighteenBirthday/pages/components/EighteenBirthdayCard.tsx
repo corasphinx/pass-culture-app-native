@@ -32,7 +32,7 @@ export function EighteenBirthdayCard(props: AchievementCardKeyProps) {
       // TODO: remove after POs validation this will happen only when POs access this page without auth
       navigate('Login')
       showInfoSnackBar({
-        message: t`Tu n'es pas connecté !`,
+        message: t`Tu n'es pas connecté !`,
       })
     }
   }
@@ -50,7 +50,7 @@ export function EighteenBirthdayCard(props: AchievementCardKeyProps) {
         message:
           'Tu pourras bénéficier des {deposit} offerts par le Ministère de la Culture dès que tu auras vérifié ton identité',
       })}
-      title={t`Bonne nouvelle !`}
+      title={t`Bonne nouvelle !`}
       swiperRef={props.swiperRef}
       name={props.name}
       index={props.index}

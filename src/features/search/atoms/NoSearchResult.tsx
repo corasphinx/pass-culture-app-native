@@ -32,7 +32,7 @@ export const NoSearchResult: React.FC = () => {
     <Container>
       <Spacer.Flex />
       <NoOffer size={156} />
-      <MainTitle>{t`Oups !`}</MainTitle>
+      <MainTitle>{t`Oups !`}</MainTitle>
       <DescriptionErrorTextContainer>
         <DescriptionErrorText>{errorMessage}</DescriptionErrorText>
       </DescriptionErrorTextContainer>

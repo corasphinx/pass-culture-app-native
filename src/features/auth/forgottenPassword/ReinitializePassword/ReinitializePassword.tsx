@@ -49,7 +49,7 @@ export const ReinitializePassword = () => {
 
   const { mutate: resetPassword, isLoading } = useResetPasswordMutation(() => {
     showSuccessSnackBar({
-      message: t`Ton mot de passe a été modifié !`,
+      message: t`Ton mot de passe a été modifié !`,
       timeout: SNACK_BAR_TIME_OUT,
     })
     analytics.logHasChangedPassword('resetPassword')

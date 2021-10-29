@@ -45,7 +45,7 @@ async function shareOffer(offer: OfferResponse, webAppUrl: string) {
 
   // url share content param is only for iOs, so we add url in message for android
   const completeMessage = Platform.OS === 'ios' ? message : message.concat(`\n\n${url}`)
-  const title = t`Je t'invite à découvrir une super offre sur le pass Culture !`
+  const title = t`Je t'invite à découvrir une super offre sur le pass Culture !`
   const shareContent = {
     message: completeMessage,
     // iOs only

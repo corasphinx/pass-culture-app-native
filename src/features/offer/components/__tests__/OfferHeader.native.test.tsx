@@ -109,7 +109,7 @@ describe('<OfferHeader />', () => {
     const url = generateLongFirebaseDynamicLink(deepLink, fullWebAppUrlWithParams)
     const message =
       'Retrouve "Sous les étoiles de Paris - VF" chez "PATHE BEAUGRENELLE" sur le pass Culture'
-    const title = "Je t'invite à découvrir une super offre sur le pass Culture !"
+    const title = "Je t'invite à découvrir une super offre sur le pass Culture !"
     expect(share).toHaveBeenCalledWith(
       { message, title, url },
       { dialogTitle: title, subject: title }
@@ -130,7 +130,7 @@ describe('<OfferHeader />', () => {
     const messageWithUrl =
       'Retrouve "Sous les étoiles de Paris - VF" chez "PATHE BEAUGRENELLE" sur le pass Culture\n\n' +
       url
-    const title = "Je t'invite à découvrir une super offre sur le pass Culture !"
+    const title = "Je t'invite à découvrir une super offre sur le pass Culture !"
     expect(share).toHaveBeenCalledWith(
       { message: messageWithUrl, title, url },
       { dialogTitle: title, subject: title }

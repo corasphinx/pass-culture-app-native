@@ -30,7 +30,7 @@ describe('NoFavoritesResult component', () => {
 
   it('should show the message', () => {
     const text = render(<NoFavoritesResult />).getByText(
-      `Retrouve toutes tes offres en un clin d'oeil en les ajoutant à tes favoris !`
+      `Retrouve toutes tes offres en un clin d'oeil en les ajoutant à tes favoris !`
     )
     expect(text).toBeTruthy()
   })

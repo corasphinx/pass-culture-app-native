@@ -31,7 +31,7 @@ export function useDeeplinkUrlHandler() {
       const { screen, params } = getScreenFromDeeplink(url)
       navigate(screen, params)
     } catch {
-      onError(DEFAULT_ERROR_MESSAGE + ' : ' + url)
+      onError(DEFAULT_ERROR_MESSAGE + ' : ' + url)
     }
   }
 }

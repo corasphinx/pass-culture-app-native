@@ -142,7 +142,7 @@ export const Login: FunctionComponent<Props> = memo(function Login(props) {
   return (
     <BottomContentPage>
       <ModalHeader
-        title={t`Connecte-toi !`}
+        title={t`Connecte-toi !`}
         leftIconAccessibilityLabel={t`Revenir en arrière`}
         leftIcon={ArrowPrevious}
         onLeftIconPress={goBack}
@@ -171,7 +171,7 @@ export const Login: FunctionComponent<Props> = memo(function Login(props) {
       <Spacer.Column numberOfSpaces={7} />
       <ForgottenPasswordContainer>
         <TouchableOpacity onPress={onForgottenPasswordClick}>
-          <Typo.ButtonText>{t`Mot de passe oublié ?`}</Typo.ButtonText>
+          <Typo.ButtonText>{t`Mot de passe oublié ?`}</Typo.ButtonText>
         </TouchableOpacity>
       </ForgottenPasswordContainer>
       <Spacer.Column numberOfSpaces={8} />
