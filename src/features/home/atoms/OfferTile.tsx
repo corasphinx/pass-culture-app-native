@@ -66,7 +66,6 @@ export const mergeOfferData = (offer: PartialOffer) => (
   stocks: [] as Array<OfferStockResponse>,
   expenseDomains: [] as Array<ExpenseDomain>,
   accessibility: {},
-  category: { label: '', name: undefined } as OfferResponse['category'],
   subcategoryId: offer.subcategoryId,
   venue: { coordinates: {} } as OfferVenueResponse,
   ...(prevData || {}),
