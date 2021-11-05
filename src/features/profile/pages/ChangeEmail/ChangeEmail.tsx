@@ -13,6 +13,7 @@ import { CHANGE_EMAIL_ERROR_CODE, useChangeEmailMutation } from 'features/profil
 import { ChangeEmailDisclaimer } from 'features/profile/pages/ChangeEmail/ChangeEmailDisclaimer'
 import { useValidateEmail } from 'features/profile/pages/ChangeEmail/utils/useValidateEmail'
 import { useSafeState } from 'libs/hooks'
+import { Banner, BannerType } from 'ui/components/Banner'
 import { ButtonPrimary } from 'ui/components/buttons/ButtonPrimary'
 import { PageHeader } from 'ui/components/headers/PageHeader'
 import { EmailInput } from 'ui/components/inputs/EmailInput'
@@ -55,7 +56,11 @@ export function ChangeEmail() {
   useForHeightKeyboardEvents(setKeyboardHeight)
 
   const disabled =
-    !isLongEnough(password) || !!emailErrorMessage || !!passwordErrorMessage || isLoading
+    !isLongEnough(password) ||
+    !!emailErrorMessage ||
+    !!passwordErrorMessage ||
+    isLoading ||
+    email.length < 1
 
   const onEmailChangeError = (errorCode: CHANGE_EMAIL_ERROR_CODE) => {
     switch (errorCode) {
@@ -81,6 +86,9 @@ export function ChangeEmail() {
     changeEmail({ email, password })
   }
 
+  const bannerProcessingText =
+    'Une demande a été envoyée à l’adresse : ${newEmail}. Tu as 24h pour valider ta nouvelle adresse. Pense à vérifier tes spams.'
+
   return (
     <React.Fragment>
       <Spacer.TopScreen />
@@ -88,6 +96,8 @@ export function ChangeEmail() {
         ref={scrollRef}
         contentContainerStyle={getScrollViewContentContainerStyle(keyboardHeight)}>
         <Spacer.Column numberOfSpaces={18} />
+        <Banner type={BannerType.TIME} title={bannerProcessingText} />
+        <Spacer.Column numberOfSpaces={4} />
         <ChangeEmailDisclaimer />
         <Spacer.Column numberOfSpaces={4} />
         <CenteredContainer>
