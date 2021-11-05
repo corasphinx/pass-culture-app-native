@@ -1,3 +1,5 @@
+import { t } from '@lingui/macro'
+
 // javascript Date can't find them...
 const MONTHS = [
   'janvier',
@@ -111,4 +113,11 @@ export const isTomorrow = (someDate: Date) => {
     someDate.getMonth() == tomorrow.getMonth() &&
     someDate.getFullYear() == tomorrow.getFullYear()
   )
+}
+
+// Displays the current hour without the minutes
+// Examples : 23h59 = 23h | 0h59 = "moins d'une heure"
+export const convertTimestampToHour = (timestamp: number) => {
+  const h = Math.floor(timestamp / 3600)
+  return h > 0 ? h + 'h' : t`moins d'une heure`
 }

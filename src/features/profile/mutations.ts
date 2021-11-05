@@ -34,3 +34,21 @@ export function useChangeEmailMutation({ onSuccess, onError }: UseChangeEmailMut
     }
   )
 }
+
+export function useGetChangeEmailToken() {
+  const fakeValidToken = '123ABC'
+  return fakeValidToken
+}
+
+// TODO (LucasBeneston) : use this when api.getnativev1changeEmailToken() is available
+// export function useGetChangeEmailToken(onError?: (error: ApiError | unknown) => void) {
+//   const { isLoggedIn } = useAuthContext()
+//   return useQuery<GetChangeEmailTokenResponse>(
+//     QueryKeys.CHANGE_EMAIL_TOKEN,
+//     () => api.getnativev1changeEmailToken(),
+//     {
+//       enabled: isLoggedIn,
+//       onError,
+//     }
+//   )
+// }

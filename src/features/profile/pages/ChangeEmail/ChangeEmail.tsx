@@ -9,10 +9,16 @@ import styled, { useTheme } from 'styled-components/native'
 import { isLongEnough } from 'features/auth/components/PasswordSecurityRules'
 import { UseNavigationType } from 'features/navigation/RootNavigator'
 import { getTabNavConfig } from 'features/navigation/TabBar/helpers'
-import { CHANGE_EMAIL_ERROR_CODE, useChangeEmailMutation } from 'features/profile/mutations'
+import {
+  CHANGE_EMAIL_ERROR_CODE,
+  useChangeEmailMutation,
+  useGetChangeEmailToken,
+} from 'features/profile/mutations'
 import { ChangeEmailDisclaimer } from 'features/profile/pages/ChangeEmail/ChangeEmailDisclaimer'
 import { useValidateEmail } from 'features/profile/pages/ChangeEmail/utils/useValidateEmail'
 import { useSafeState } from 'libs/hooks'
+import { getTokenStatusWithExpirationInformations } from 'libs/jwt'
+import { convertTimestampToHour } from 'libs/parsers/formatDates'
 import { Banner, BannerType } from 'ui/components/Banner'
 import { ButtonPrimary } from 'ui/components/buttons/ButtonPrimary'
 import { PageHeader } from 'ui/components/headers/PageHeader'
@@ -86,8 +92,18 @@ export function ChangeEmail() {
     changeEmail({ email, password })
   }
 
-  const bannerProcessingText =
-    'Une demande a été envoyée à l’adresse : ${newEmail}. Tu as 24h pour valider ta nouvelle adresse. Pense à vérifier tes spams.'
+  const emailChangeToken = useGetChangeEmailToken()
+  const {
+    status: tokenStatus,
+    timeBeforeExpiration: tokenTimeBeforeExpiration,
+  } = getTokenStatusWithExpirationInformations(emailChangeToken)
+
+  const timeBeforeTokenExpiration = tokenTimeBeforeExpiration
+    ? convertTimestampToHour(tokenTimeBeforeExpiration)
+    : '24h'
+
+  // TODO (LucasBeneston) : Récupérer la nouvelle adresse stocké en base
+  const bannerProcessingText = t`Une demande a été envoyée à ta nouvelle adresse. Tu as ${timeBeforeTokenExpiration} pour valider ta nouvelle adresse. Pense à vérifier tes spams.`
 
   return (
     <React.Fragment>
@@ -96,7 +112,7 @@ export function ChangeEmail() {
         ref={scrollRef}
         contentContainerStyle={getScrollViewContentContainerStyle(keyboardHeight)}>
         <Spacer.Column numberOfSpaces={18} />
-        <Banner type={BannerType.TIME} title={bannerProcessingText} />
+        {tokenStatus === 'valid' && <Banner type={BannerType.TIME} title={bannerProcessingText} />}
         <Spacer.Column numberOfSpaces={4} />
         <ChangeEmailDisclaimer />
         <Spacer.Column numberOfSpaces={4} />

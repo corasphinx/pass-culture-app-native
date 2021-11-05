@@ -41,6 +41,94 @@ Array [
           ]
         }
       />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#f5f5f5",
+              "borderRadius": 8,
+              "display": "flex",
+              "flexDirection": "row",
+              "paddingVertical": 16,
+            },
+          ]
+        }
+      >
+        <View
+          numberOfSpaces={4}
+          style={
+            Array [
+              Object {
+                "width": 16,
+              },
+            ]
+          }
+        />
+        <View
+          height={32}
+          width={32}
+        >
+          <Text>
+            undefined-SVG-Mock
+          </Text>
+        </View>
+        <View
+          numberOfSpaces={4}
+          style={
+            Array [
+              Object {
+                "width": 16,
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "flexShrink": 1,
+              },
+            ]
+          }
+        >
+          <Text
+            color="#151515"
+            style={
+              Array [
+                Object {
+                  "color": "#151515",
+                  "fontFamily": "Montserrat-SemiBold",
+                  "fontSize": 12,
+                  "lineHeight": 16,
+                },
+              ]
+            }
+          >
+            Une demande a été envoyée à l’adresse : \${newEmail}. Tu as 24h pour valider ta nouvelle adresse. Pense à vérifier tes spams.
+          </Text>
+        </View>
+        <View
+          numberOfSpaces={5}
+          style={
+            Array [
+              Object {
+                "width": 20,
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        numberOfSpaces={4}
+        style={
+          Array [
+            Object {
+              "height": 16,
+            },
+          ]
+        }
+      />
       <Text
         color="#626262"
         style={

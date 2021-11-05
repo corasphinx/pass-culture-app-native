@@ -16,7 +16,7 @@ exports[`<BookingDetails /> should render correctly when user has selected optio
         Object {
           "alignItems": "center",
           "backgroundColor": "#f5f5f5",
-          "borderRadius": 4,
+          "borderRadius": 8,
           "display": "flex",
           "flexDirection": "row",
           "paddingVertical": 16,
@@ -25,11 +25,11 @@ exports[`<BookingDetails /> should render correctly when user has selected optio
     }
   >
     <View
-      numberOfSpaces={3}
+      numberOfSpaces={4}
       style={
         Array [
           Object {
-            "width": 12,
+            "width": 16,
           },
         ]
       }
@@ -43,11 +43,11 @@ exports[`<BookingDetails /> should render correctly when user has selected optio
       </Text>
     </View>
     <View
-      numberOfSpaces={3}
+      numberOfSpaces={4}
       style={
         Array [
           Object {
-            "width": 12,
+            "width": 16,
           },
         ]
       }

@@ -22,6 +22,49 @@ Object {
             style="height: 72px;"
           />
           <div
+            class="css-view-1dbjc4n"
+            style="align-items: center; background-color: rgb(245, 245, 245); border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; display: flex; flex-direction: row; padding-top: 16px; padding-bottom: 16px;"
+          >
+            <div
+              class="css-view-1dbjc4n"
+              style="width: 16px;"
+            />
+            <div
+              class="css-view-1dbjc4n"
+            >
+              <div
+                class="css-text-901oao"
+                dir="auto"
+              >
+                undefined-SVG-Mock
+              </div>
+            </div>
+            <div
+              class="css-view-1dbjc4n"
+              style="width: 16px;"
+            />
+            <div
+              class="css-view-1dbjc4n"
+              style="flex-shrink: 1;"
+            >
+              <div
+                class="css-text-901oao"
+                dir="auto"
+                style="color: rgb(21, 21, 21); font-family: Montserrat-SemiBold; font-size: 12px; line-height: 16px;"
+              >
+                Une demande a été envoyée à l’adresse : \${newEmail}. Tu as 24h pour valider ta nouvelle adresse. Pense à vérifier tes spams.
+              </div>
+            </div>
+            <div
+              class="css-view-1dbjc4n"
+              style="width: 20px;"
+            />
+          </div>
+          <div
+            class="css-view-1dbjc4n"
+            style="height: 16px;"
+          />
+          <div
             class="css-text-901oao"
             dir="auto"
             style="color: rgb(98, 98, 98); font-family: Montserrat-SemiBold; font-size: 12px; line-height: 16px;"
@@ -251,6 +294,49 @@ Object {
         <div
           class="css-view-1dbjc4n"
           style="height: 72px;"
+        />
+        <div
+          class="css-view-1dbjc4n"
+          style="align-items: center; background-color: rgb(245, 245, 245); border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; display: flex; flex-direction: row; padding-top: 16px; padding-bottom: 16px;"
+        >
+          <div
+            class="css-view-1dbjc4n"
+            style="width: 16px;"
+          />
+          <div
+            class="css-view-1dbjc4n"
+          >
+            <div
+              class="css-text-901oao"
+              dir="auto"
+            >
+              undefined-SVG-Mock
+            </div>
+          </div>
+          <div
+            class="css-view-1dbjc4n"
+            style="width: 16px;"
+          />
+          <div
+            class="css-view-1dbjc4n"
+            style="flex-shrink: 1;"
+          >
+            <div
+              class="css-text-901oao"
+              dir="auto"
+              style="color: rgb(21, 21, 21); font-family: Montserrat-SemiBold; font-size: 12px; line-height: 16px;"
+            >
+              Une demande a été envoyée à l’adresse : \${newEmail}. Tu as 24h pour valider ta nouvelle adresse. Pense à vérifier tes spams.
+            </div>
+          </div>
+          <div
+            class="css-view-1dbjc4n"
+            style="width: 20px;"
+          />
+        </div>
+        <div
+          class="css-view-1dbjc4n"
+          style="height: 16px;"
         />
         <div
           class="css-text-901oao"
