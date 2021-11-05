@@ -715,7 +715,9 @@ workflows:
             tags:
               ignore: /.*/
             branches:
-              only: master
+              only:
+                - master
+                - testing-test
           requires:
             - checkout-and-install-deps
             - test-lint-and-types
