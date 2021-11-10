@@ -2058,6 +2058,10 @@ msgstr "Un problème est survenu pendant l'inscription, réessaie plus tard."
 msgid "Un problème est survenu pendant la réinitialisation, réessaie plus tard."
 msgstr "Un problème est survenu pendant la réinitialisation, réessaie plus tard."
 
+#: src/features/profile/pages/ChangeEmail/ChangeEmail.tsx
+msgid "Une demande a été envoyée à ta nouvelle adresse. Tu as {timeBeforeTokenExpiration} pour valider ta nouvelle adresse. Pense à vérifier tes spams."
+msgstr "Une demande a été envoyée à ta nouvelle adresse. Tu as {timeBeforeTokenExpiration} pour valider ta nouvelle adresse. Pense à vérifier tes spams."
+
 #: src/api/__mocks__/apiHelpers.ts
 #: src/api/apiHelpers.ts
 #: src/features/profile/pages/NotificationSettings.tsx
@@ -2067,6 +2071,14 @@ msgstr "Une erreur est survenue"
 #: src/features/errors/pages/AsyncErrorBoundary.tsx
 msgid "Une erreur s'est produite pendant le chargement."
 msgstr "Une erreur s'est produite pendant le chargement."
+
+#: src/features/profile/pages/ChangeEmail/ChangeEmail.tsx
+msgid ""
+"Une erreur s’est produite pendant la modification de ton e-mail.\n"
+"Réessaie plus tard."
+msgstr ""
+"Une erreur s’est produite pendant la modification de ton e-mail.\n"
+"Réessaie plus tard."
 
 #: src/features/profile/pages/ConfirmDeleteProfile.tsx
 msgid "Une erreur s’est produite pendant le chargement."
@@ -2342,6 +2354,10 @@ msgstr "les mots de passe ne concordent pas"
 #: src/features/offer/pages/OfferDescription.tsx
 msgid "metteur en scène"
 msgstr "metteur en scène"
+
+#: src/libs/parsers/formatDates.ts
+msgid "moins d'une heure"
+msgstr "moins d'une heure"
 
 #: src/features/bookOffer/components/BookingDetails.tsx
 msgid "montant déduit"

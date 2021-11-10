@@ -36,10 +36,9 @@ export const getAccessTokenStatus = (accessToken: string | null): AccessTokenSta
   return tokenContent.exp * 1000 > Date.now() ? 'valid' : 'expired'
 }
 
-type TokenStatusWithExpirationDate = {
+type TokenStatusWithExpirationInformations = {
   status: 'unknown' | 'expired' | 'valid'
-  expirationDate: number | null
-  timeBeforeExpiration: number | null
+  timeBeforeExpiration?: number
 }
 const dateNow = Date.now()
 
@@ -51,26 +50,24 @@ const tokenExpirationDate = dateNow + TEN_HOURS - ONE_SECOND
 // TODO (LucasBeneston) : Remove when api.getnativev1changeEmailToken() is available
 export const getTokenStatusWithExpirationInformations = (
   tokenStatus: string | null
-): TokenStatusWithExpirationDate => {
-  if (!tokenStatus) return { status: 'unknown', expirationDate: null, timeBeforeExpiration: null }
-  if (!tokenExpirationDate)
-    return { status: 'unknown', expirationDate: null, timeBeforeExpiration: null }
+): TokenStatusWithExpirationInformations => {
+  if (!tokenStatus) return { status: 'unknown' }
+  if (!tokenExpirationDate) return { status: 'unknown' }
   const timeBeforeExpiration = tokenExpirationDate - dateNow
   return tokenExpirationDate > dateNow
-    ? { status: 'valid', expirationDate: tokenExpirationDate, timeBeforeExpiration }
-    : { status: 'expired', expirationDate: tokenExpirationDate, timeBeforeExpiration: null }
+    ? { status: 'valid', timeBeforeExpiration }
+    : { status: 'expired' }
 }
 
 // TODO (LucasBeneston) : Use this when api.getnativev1changeEmailToken() is available
 // export const getTokenStatusWithExpirationInformations = (
 //   tokenStatus: string | null
-// ): TokenStatusWithExpirationDate => {
-//   if (!tokenStatus) return { status: 'unknown', expirationDate: null, timeBeforeExpiration: null }
+// ): TokenStatusWithExpirationInformations => {
+//   if (!tokenStatus) return { status: 'unknown' }
 //   const tokenContent = decodeAccessToken(tokenStatus)
-//   if (!tokenContent?.exp)
-//     return { status: 'unknown', expirationDate: null, timeBeforeExpiration: null }
+//   if (!tokenContent?.exp) return { status: 'unknown' }
 //   const timeBeforeExpiration = tokenExpirationDate - dateNow
 //   return tokenExpirationDate * 1000 > Date.now()
-//     ? { status: 'valid', expirationDate: tokenExpirationDate, timeBeforeExpiration }
-//     : { status: 'expired', expirationDate: tokenExpirationDate, timeBeforeExpiration: null }
+//     ? { status: 'valid', timeBeforeExpiration }
+//     : { status: 'expired' }
 // }

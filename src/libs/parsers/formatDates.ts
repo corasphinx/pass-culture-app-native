@@ -115,7 +115,7 @@ export const isTomorrow = (someDate: Date) => {
   )
 }
 
-// Displays the current hour without the minutes
+// Display the current hour without the minutes
 // Examples : 23h59 = 23h | 0h59 = "moins d'une heure"
 export const convertTimestampToHour = (timestamp: number) => {
   const h = Math.floor(timestamp / 3600)

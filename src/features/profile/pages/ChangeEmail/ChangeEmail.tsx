@@ -93,13 +93,12 @@ export function ChangeEmail() {
   }
 
   const emailChangeToken = useGetChangeEmailToken()
-  const {
-    status: tokenStatus,
-    timeBeforeExpiration: tokenTimeBeforeExpiration,
-  } = getTokenStatusWithExpirationInformations(emailChangeToken)
+  const { status: tokenStatus, timeBeforeExpiration } = getTokenStatusWithExpirationInformations(
+    emailChangeToken
+  )
 
-  const timeBeforeTokenExpiration = tokenTimeBeforeExpiration
-    ? convertTimestampToHour(tokenTimeBeforeExpiration)
+  const timeBeforeTokenExpiration = timeBeforeExpiration
+    ? convertTimestampToHour(timeBeforeExpiration)
     : '24h'
 
   // TODO (LucasBeneston) : Récupérer la nouvelle adresse stocké en base
