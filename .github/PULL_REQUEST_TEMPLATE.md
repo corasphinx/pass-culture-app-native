@@ -1,3 +1,8 @@
+---
+name: 'Feature Request'
+title: 'feat: '
+---
+
 Link to JIRA ticket: https://passculture.atlassian.net/browse/PC-XXXXX
 
 ## Checklist
