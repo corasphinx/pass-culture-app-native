@@ -1,19 +1,18 @@
-import React, { ReactElement } from 'react'
+import { FunctionComponent } from 'react'
 import { TextStyle } from 'react-native'
-import { ColorsEnum } from 'theme/colors'
-import { getSpacing } from 'ui/utils'
 
 import { Clock } from 'ui/svg/icons/Clock'
+import { IconInterface } from 'ui/svg/icons/types'
 
 type NotEligibleEduConnectErrorData = {
-  Icon: () => ReactElement
+  Icon: FunctionComponent<IconInterface>
   title: string
   description: string
   titleAlignment?: Exclude<TextStyle['textAlign'], 'auto'>
   descriptionAlignment?: Exclude<TextStyle['textAlign'], 'auto'>
 }
 const UserAgeNotValid: NotEligibleEduConnectErrorData = {
-  Icon: () => <Clock color={ColorsEnum.WHITE} size={getSpacing(30)} />,
+  Icon: Clock,
   title: `Tu ne fais pas partie de la phase de test`,
   description: `Le pass Culture pour les jeunes de 15 à 17 ans est actuellement en phase de test auprès de 22 établissements scolaires des académies de Rennes et de Versailles.
 
@@ -25,7 +24,7 @@ En attendant, tu peux tout de même découvrir l'application mais sans pouvoir r
 }
 
 const InvalidAgeFromEduConnect: NotEligibleEduConnectErrorData = {
-  Icon: () => <Clock color={ColorsEnum.WHITE} size={getSpacing(30)} />,
+  Icon: Clock,
   title: `Oh Non!`,
   description: `La date de naissance enregistrée dans ÉduConnect semble indiquer que tu n'as pas l'âge requis pour obtenir l'aide du Gouvernement.
 
