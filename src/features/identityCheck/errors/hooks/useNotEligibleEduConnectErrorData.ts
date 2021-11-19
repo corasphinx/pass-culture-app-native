@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react'
 import { TextStyle } from 'react-native'
 
 import { Clock } from 'ui/svg/icons/Clock'
+import { InfoFraud } from 'ui/svg/icons/InfoFraud'
 import { IconInterface } from 'ui/svg/icons/types'
 
 type NotEligibleEduConnectErrorData = {
@@ -24,7 +25,7 @@ En attendant, tu peux tout de même découvrir l'application mais sans pouvoir r
 }
 
 const InvalidAgeFromEduConnect: NotEligibleEduConnectErrorData = {
-  Icon: Clock,
+  Icon: InfoFraud,
   title: `Oh Non!`,
   description: `La date de naissance enregistrée dans ÉduConnect semble indiquer que tu n'as pas l'âge requis pour obtenir l'aide du Gouvernement.
 
