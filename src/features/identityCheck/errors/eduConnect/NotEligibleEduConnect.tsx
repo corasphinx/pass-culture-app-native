@@ -42,8 +42,6 @@ export const NotEligibleEduConnect = ({
     global.setTimeout(resetErrorBoundary, beforeResetDelayInMs)
   }
 
-  console.log('tertiaryButtonVisible : ', tertiaryButtonVisible)
-
   return (
     <GenericInfoPage title={title} icon={Icon} iconSize={getSpacing(40)}>
       <Helmet>
@@ -69,7 +67,7 @@ export const NotEligibleEduConnect = ({
           <ButtonTertiaryWhite
             icon={PlainArrowPrevious}
             title={t`Retourner à l'accueil`}
-            onPress={navigateToHome}
+            onPress={onAbandon}
           />
         </React.Fragment>
       )}

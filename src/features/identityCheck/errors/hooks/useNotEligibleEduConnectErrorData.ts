@@ -50,7 +50,9 @@ const InvalidInformation: NotEligibleEduConnectErrorData = {
   descriptionAlignment: 'center',
   primaryButtonText: t`Réessayer de m'identifier`,
   tertiaryButtonVisible: true,
-  onPrimaryButtonPress: () => {},
+  onPrimaryButtonPress: () => {
+    //(Wendy) TODO: Dans le prochain Ticket ajouter une navigation pour revenir à l'action précédente
+  },
 }
 
 const LegalRepresentative: NotEligibleEduConnectErrorData = {
@@ -63,7 +65,9 @@ const LegalRepresentative: NotEligibleEduConnectErrorData = {
   descriptionAlignment: 'center',
   primaryButtonText: t`Réessayer de m'identifier`,
   tertiaryButtonVisible: true,
-  onPrimaryButtonPress: () => {},
+  onPrimaryButtonPress: () => {
+    //(Wendy) TODO: Dans le prochain Ticket ajouter une navigation pour revenir à l'action précédente
+  },
 }
 type NotEligibleEduConnectErrorMessage =
   | 'UserAlreadyBeneficiaryEduConnect'
