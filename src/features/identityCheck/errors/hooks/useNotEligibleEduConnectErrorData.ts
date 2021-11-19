@@ -43,11 +43,21 @@ const InvalidInformation: NotEligibleEduConnectErrorData = {
 Refais une demande en vérifiant ton identité avec ta pièce d’identité.`,
   descriptionAlignment: 'center',
 }
+
+const LegalRepresentative: NotEligibleEduConnectErrorData = {
+  Icon: InfoFraud,
+  title: t`Qui est-ce ?`,
+  description: t`Les informations provenant d'ÉduConnect indiquent que vous êtes le représentant légal d'un jeune scolarisé.
+
+L'usage du pass Culture est strictement nominatif. Le compte doit être créé et utilisé par un jeune éligible, de 15 à 18 ans. L'identification doit se faire au nom du futur bénéficiaire. `,
+  descriptionAlignment: 'center',
+}
 type NotEligibleEduConnectErrorMessage =
   | 'InvalidAgeFromEduConnect'
   | 'UserAlreadyBeneficiary'
   | 'UserAgeNotValid'
   | 'InvalidInformation'
+  | 'LegalRepresentative'
 
 export function useNotEligibleEduConnectErrorData(
   message: NotEligibleEduConnectErrorMessage | string
@@ -58,6 +68,9 @@ export function useNotEligibleEduConnectErrorData(
 
     case 'InvalidInformation':
       return InvalidInformation
+
+    case 'LegalRepresentative':
+      return LegalRepresentative
 
     default:
       return UserAgeNotValid

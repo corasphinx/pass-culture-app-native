@@ -19,13 +19,9 @@ export const NotEligibleEduConnect = ({
   error: { message },
   resetErrorBoundary,
 }: ScreenErrorProps) => {
-  const {
-    title,
-    description,
-    titleAlignment,
-    descriptionAlignment,
-    Icon,
-  } = useNotEligibleEduConnectErrorData(message)
+  const { title, description, descriptionAlignment, Icon } = useNotEligibleEduConnectErrorData(
+    message
+  )
   const isSmallScreen = useMediaQuery({ maxHeight: SMALL_HEIGHT })
 
   const getGrid = useGrid()

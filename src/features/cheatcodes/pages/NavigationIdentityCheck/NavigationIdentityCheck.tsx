@@ -77,6 +77,14 @@ export function NavigationIdentityCheck(): JSX.Element {
             }}
           />
         </Row>
+        <Row half>
+          <NavigationButton
+            title={'LegalRepresentative Error'}
+            onPress={() => {
+              setScreenError(new ScreenError('LegalRepresentative', NotEligibleEduConnect))
+            }}
+          />
+        </Row>
       </StyledContainer>
       <Spacer.BottomScreen />
     </ScrollView>
