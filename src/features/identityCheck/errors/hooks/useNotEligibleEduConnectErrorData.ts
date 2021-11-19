@@ -12,6 +12,9 @@ type NotEligibleEduConnectErrorData = {
   description: string
   titleAlignment?: Exclude<TextStyle['textAlign'], 'auto'>
   descriptionAlignment?: Exclude<TextStyle['textAlign'], 'auto'>
+  primaryButtonText?: string
+  tertiaryButtonVisible?: boolean
+  onPrimaryButtonPress?: () => void
 }
 const UserAgeNotValid: NotEligibleEduConnectErrorData = {
   Icon: Clock,
@@ -45,6 +48,9 @@ const InvalidInformation: NotEligibleEduConnectErrorData = {
     '\n\n' +
     t`Refais une demande en vérifiant ton identité avec ta pièce d’identité.`,
   descriptionAlignment: 'center',
+  primaryButtonText: t`Réessayer de m'identifier`,
+  tertiaryButtonVisible: true,
+  onPrimaryButtonPress: () => {},
 }
 
 const LegalRepresentative: NotEligibleEduConnectErrorData = {
@@ -55,9 +61,13 @@ const LegalRepresentative: NotEligibleEduConnectErrorData = {
     '\n\n' +
     t`L'usage du pass Culture est strictement nominatif. Le compte doit être créé et utilisé par un jeune éligible, de 15 à 18 ans. L'identification doit se faire au nom du futur bénéficiaire. `,
   descriptionAlignment: 'center',
+  primaryButtonText: t`Réessayer de m'identifier`,
+  tertiaryButtonVisible: true,
+  onPrimaryButtonPress: () => {},
 }
 type NotEligibleEduConnectErrorMessage =
   | 'UserAlreadyBeneficiaryEduConnect'
+  | 'InvalidAgeFromEduConnectEduConnect'
   | 'UserAgeNotValidEduConnect'
   | 'InvalidInformationEduConnect'
   | 'LegalRepresentativeEduConnect'
@@ -66,7 +76,7 @@ export function useNotEligibleEduConnectErrorData(
   message: NotEligibleEduConnectErrorMessage | string
 ) {
   switch (message) {
-    case 'UserAgeNotValidEduConnect':
+    case 'InvalidAgeFromEduConnectEduConnect':
       return InvalidAgeFromEduConnect
 
     case 'InvalidInformationEduConnect':

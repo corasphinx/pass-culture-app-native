@@ -1,3 +1,4 @@
+import { t } from '@lingui/macro'
 import React from 'react'
 import { TextProps, TextStyle } from 'react-native'
 import styled from 'styled-components/native'
@@ -7,7 +8,9 @@ import { ScreenErrorProps } from 'libs/monitoring/errors'
 import { Helmet } from 'libs/react-helmet/Helmet'
 import { useMediaQuery } from 'libs/react-responsive/useMediaQuery'
 import { ButtonPrimaryWhite } from 'ui/components/buttons/ButtonPrimaryWhite'
+import { ButtonTertiaryWhite } from 'ui/components/buttons/ButtonTertiaryWhite'
 import { GenericInfoPage } from 'ui/components/GenericInfoPage'
+import { PlainArrowPrevious } from 'ui/svg/icons/PlainArrowPrevious'
 import { getSpacing, getSpacingString, Spacer, ColorsEnum, Typo } from 'ui/theme'
 import { useGrid } from 'ui/theme/grid'
 
@@ -19,11 +22,16 @@ export const NotEligibleEduConnect = ({
   error: { message },
   resetErrorBoundary,
 }: ScreenErrorProps) => {
-  const { title, description, descriptionAlignment, Icon } = useNotEligibleEduConnectErrorData(
-    message
-  )
+  const {
+    title,
+    description,
+    descriptionAlignment,
+    Icon,
+    primaryButtonText,
+    tertiaryButtonVisible = false,
+    onPrimaryButtonPress,
+  } = useNotEligibleEduConnectErrorData(message)
   const isSmallScreen = useMediaQuery({ maxHeight: SMALL_HEIGHT })
-
   const getGrid = useGrid()
   const bodyFontSize = getSpacing(getGrid({ default: 3.75, sm: 3 }, 'height'))
 
@@ -33,6 +41,8 @@ export const NotEligibleEduConnect = ({
     const beforeResetDelayInMs = 300
     global.setTimeout(resetErrorBoundary, beforeResetDelayInMs)
   }
+
+  console.log('tertiaryButtonVisible : ', tertiaryButtonVisible)
 
   return (
     <GenericInfoPage title={title} icon={Icon} iconSize={getSpacing(40)}>
@@ -48,7 +58,21 @@ export const NotEligibleEduConnect = ({
         {description}
       </Body>
       <Spacer.Column numberOfSpaces={12} />
-      <ButtonPrimaryWhite title={"Retourner à l'accueil"} onPress={onAbandon} />
+      <ButtonPrimaryWhite
+        title={primaryButtonText ?? "Retourner à l'accueil"}
+        onPress={onPrimaryButtonPress ?? onAbandon}
+      />
+
+      {!!tertiaryButtonVisible && (
+        <React.Fragment>
+          <Spacer.Column numberOfSpaces={4} />
+          <ButtonTertiaryWhite
+            icon={PlainArrowPrevious}
+            title={t`Retourner à l'accueil`}
+            onPress={navigateToHome}
+          />
+        </React.Fragment>
+      )}
     </GenericInfoPage>
   )
 }

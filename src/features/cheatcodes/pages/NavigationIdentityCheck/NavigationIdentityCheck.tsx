@@ -65,7 +65,7 @@ export function NavigationIdentityCheck(): JSX.Element {
           <NavigationButton
             title={'Inelligible Educonnect Error'}
             onPress={() => {
-              setScreenError(new ScreenError('UserAgeNotValid', NotEligibleEduConnect))
+              setScreenError(new ScreenError('UserAgeNotValidEduConnect', NotEligibleEduConnect))
             }}
           />
         </Row>
@@ -73,7 +73,17 @@ export function NavigationIdentityCheck(): JSX.Element {
           <NavigationButton
             title={'InvalidAgeFromEduConnect Error'}
             onPress={() => {
-              setScreenError(new ScreenError('InvalidAgeFromEduConnect', NotEligibleEduConnect))
+              setScreenError(
+                new ScreenError('InvalidAgeFromEduConnectEduConnect', NotEligibleEduConnect)
+              )
+            }}
+          />
+        </Row>
+        <Row half>
+          <NavigationButton
+            title={'InvalidInformationEduConnect Error'}
+            onPress={() => {
+              setScreenError(new ScreenError('InvalidInformationEduConnect', NotEligibleEduConnect))
             }}
           />
         </Row>
@@ -81,7 +91,9 @@ export function NavigationIdentityCheck(): JSX.Element {
           <NavigationButton
             title={'LegalRepresentative Error'}
             onPress={() => {
-              setScreenError(new ScreenError('LegalRepresentative', NotEligibleEduConnect))
+              setScreenError(
+                new ScreenError('LegalRepresentativeEduConnect', NotEligibleEduConnect)
+              )
             }}
           />
         </Row>
