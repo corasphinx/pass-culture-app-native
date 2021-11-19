@@ -53,17 +53,6 @@ export const NotEligibleEduConnect = ({
   )
 }
 
-const Container = styled.View({
-  flex: 1,
-  alignItems: 'center',
-})
-
-const ButtonContainer = styled.View({
-  marginTop: getSpacing(10),
-  alignItems: 'stretch',
-  alignSelf: 'stretch',
-})
-
 export const TextContainer = styled.View({
   maxWidth: getSpacing(88),
   flexDirection: 'column',
