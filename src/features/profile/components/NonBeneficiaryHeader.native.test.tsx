@@ -36,7 +36,12 @@ jest.mock('features/auth/api', () => ({
         data: { token: 'thisIsATokenForIdCheck' },
       } as UseQueryResult<GetIdCheckTokenResponse>)
   ),
-  useDepositAmount: () => '300 €',
+  useDepositAmountsByAge: jest.fn(() => ({
+    fifteenYearsOldDeposit: '20 €',
+    sixteenYearsOldDeposit: '30 €',
+    seventeenYearsOldDeposit: '30 €',
+    eighteenYearsOldDeposit: '300 €',
+  })),
 }))
 jest.mock('features/auth/settings')
 

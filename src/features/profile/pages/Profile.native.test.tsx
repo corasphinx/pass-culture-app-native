@@ -75,7 +75,6 @@ jest.mock('features/favorites/pages/FavoritesWrapper', () => ({
     dispatch: mockFavoriteDispatch,
   }),
 }))
-const mockDepositAmount = '300 €'
 jest.mock('features/auth/api', () => ({
   useGetIdCheckToken: jest.fn(
     () =>
@@ -84,7 +83,12 @@ jest.mock('features/auth/api', () => ({
         data: { token: 'thisIsATokenForIdCheck' },
       } as UseQueryResult<GetIdCheckTokenResponse>)
   ),
-  useDepositAmount: () => mockDepositAmount,
+  useDepositAmountsByAge: jest.fn(() => ({
+    fifteenYearsOldDeposit: '20 €',
+    sixteenYearsOldDeposit: '30 €',
+    seventeenYearsOldDeposit: '30 €',
+    eighteenYearsOldDeposit: '300 €',
+  })),
 }))
 jest.mock('features/auth/settings')
 
