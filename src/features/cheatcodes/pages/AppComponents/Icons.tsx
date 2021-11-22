@@ -183,7 +183,7 @@ export const Icons: FunctionComponent = () => {
       <Icon name="CalendarDeprecated" component={CalendarDeprecated} />
       <Icon name="LocationBuilding" component={LocationBuilding} isNew />
       <Icon name="LocationBuildingDeprecated" component={LocationBuildingDeprecated} />
-      <Icon name="InfoFraud" component={InfoFraud} />
+      <Icon name="InfoFraud" component={InfoFraud} isNew />
       <AlignedText>
         <TicketBooked width={ICON_SIZE} height={ICON_SIZE} />
         <Text> - TicketBooked </Text>
