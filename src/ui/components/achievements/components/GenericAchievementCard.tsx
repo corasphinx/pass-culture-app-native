@@ -24,6 +24,7 @@ export type AchievementCardKeyProps = {
   swiperRef?: RefObject<Swiper>
   lastIndex?: number
   skip?: () => void
+  onLastCardAction?: () => void
 }
 
 export type AchievementCardProps = AchievementCardKeyProps & {

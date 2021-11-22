@@ -23,7 +23,8 @@ export function FourthCard(props: AchievementCardKeyProps) {
   }, [isActiveCard])
 
   function onButtonPress() {
-    reset({ index: 0, routes: [{ name: homeNavConfig[0] }] })
+    if (props.onLastCardAction) props.onLastCardAction()
+    else reset({ index: 0, routes: [{ name: homeNavConfig[0] }] })
   }
 
   return (

@@ -15,7 +15,8 @@ export function SecondCard(props: AchievementCardKeyProps) {
   const deposit = depositAmount.replace(' ', '')
 
   function onButtonPress() {
-    props.swiperRef?.current?.goToNext()
+    if (props.onLastCardAction) props.onLastCardAction()
+    else props.swiperRef?.current?.goToNext()
   }
 
   const text = settings?.enableNativeEacIndividual

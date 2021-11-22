@@ -21,6 +21,7 @@ export function ThirdCard(props: AchievementCardKeyProps) {
         analytics.logHasActivateGeolocFromTutorial()
       },
     })
+    if (props.onLastCardAction) props.onLastCardAction()
   }
 
   return (

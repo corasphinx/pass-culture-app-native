@@ -24,6 +24,7 @@ export type Props = {
   screenName: ScreenNames
   children: Array<ReactElement<AchievementCardKeyProps>> | ReactElement<AchievementCardKeyProps>
   onFirstCardBackAction?: () => void
+  onLastCardAction?: () => void
   skip?: () => void
 }
 
@@ -50,14 +51,15 @@ export const GenericAchievement: FunctionComponent<Props> = (props: Props) => {
   })
 
   async function skip() {
-    if (props.skip) {
-      props.skip()
-    }
     if (swiperRef?.current) {
       const index = swiperRef.current.getActiveIndex()
       analytics.logHasSkippedTutorial(`${props.screenName}${index + 1}`)
     }
-    navigation.reset({ index: 0, routes: [{ name: homeNavConfig[0] }] })
+    if (props.skip) {
+      props.skip()
+    } else {
+      navigation.reset({ index: 0, routes: [{ name: homeNavConfig[0] }] })
+    }
   }
 
   return (
@@ -78,8 +80,9 @@ export const GenericAchievement: FunctionComponent<Props> = (props: Props) => {
             controlsEnabled={!!lastIndex}
             gesturesEnabled={() => !!lastIndex}
             slideWrapperStyle={slideWrapperStyle}>
-            {cards.map((card, index: number) =>
-              cloneElement(card as ReactElement<AchievementCardKeyProps>, {
+            {cards.map((card, index: number) => {
+              const isLastCard = index === lastIndex
+              return cloneElement(card as ReactElement<AchievementCardKeyProps>, {
                 key: index,
                 swiperRef,
                 name:
@@ -87,8 +90,9 @@ export const GenericAchievement: FunctionComponent<Props> = (props: Props) => {
                   `${props.screenName}${index + 1}`,
                 lastIndex,
                 skip,
+                onLastCardAction: isLastCard ? props.onLastCardAction : undefined,
               })
-            )}
+            })}
           </Swiper>
         </SwiperContainer>
         <Spacer.Column numberOfSpaces={getSpacing(0.5)} />

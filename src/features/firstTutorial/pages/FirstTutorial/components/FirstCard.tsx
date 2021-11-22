@@ -9,7 +9,8 @@ import {
 
 export function FirstCard(props: AchievementCardKeyProps) {
   function onButtonPress() {
-    props.swiperRef?.current?.goToNext()
+    if (props.onLastCardAction) props.onLastCardAction()
+    else props.swiperRef?.current?.goToNext()
   }
 
   return (
