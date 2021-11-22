@@ -689,6 +689,36 @@ export interface CulturalSurveyRequest {
      */
     needsToFillCulturalSurvey: boolean;
 }/**
+ * 
+ * @export
+ * @interface DepositAmountsByAge
+ */
+export interface DepositAmountsByAge {
+    /**
+     * 
+     * @type {number}
+     * @memberof DepositAmountsByAge
+     */
+    age_15?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof DepositAmountsByAge
+     */
+    age_16?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof DepositAmountsByAge
+     */
+    age_17?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof DepositAmountsByAge
+     */
+    age_18?: number;
+}/**
  * An enumeration.
  * @export
  * @enum {string}
@@ -1003,6 +1033,18 @@ export interface IdentificationSessionResponse {
      * @memberof IdentificationSessionResponse
      */
     identificationUrl: string;
+}/**
+ * 
+ * @export
+ * @interface NextSubscriptionStepRequest
+ */
+export interface NextSubscriptionStepRequest {
+    /**
+     * 
+     * @type {SubscriptionStep}
+     * @memberof NextSubscriptionStepRequest
+     */
+    nextSubscriptionStep?: SubscriptionStep | null;
 }/**
  * 
  * @export
@@ -1697,6 +1739,12 @@ export interface SettingsResponse {
     depositAmount: number;
     /**
      * 
+     * @type {DepositAmountsByAge}
+     * @memberof SettingsResponse
+     */
+    depositAmountsByAge?: DepositAmountsByAge;
+    /**
+     * 
      * @type {boolean}
      * @memberof SettingsResponse
      */
@@ -1984,6 +2032,18 @@ export interface SubscriptionMessage {
      * @memberof SubscriptionMessage
      */
     userMessage: string;
+}/**
+ * An enumeration.
+ * @export
+ * @enum {string}
+ */
+export enum SubscriptionStep {
+    EmailValidation = 'email-validation',
+    Maintenance = 'maintenance',
+    PhoneValidation = 'phone-validation',
+    ProfileCompletion = 'profile-completion',
+    IdentityCheck = 'identity-check',
+    UserProfiling = 'user-profiling'
 }/**
  * 
  * @export
@@ -2700,6 +2760,28 @@ export const DefaultApiFetchParamCreator = function (configuration?: Configurati
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
             const localVarHeaderParameter = await getAuthenticationHeaders();
             const localVarQueryParameter = {} as any;
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            localVarUrlObj.search = null;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary next_subscription_step <GET>
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getnativev1subscriptionnextStep(options: any = {}): Promise<FetchArgs> {
+            const localVarPath = `/native/v1/subscription/next_step`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = await getAuthenticationHeaders();
+            const localVarQueryParameter = {} as any;
+            // authentication JWTAuth required
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             localVarUrlObj.search = null;
@@ -3610,6 +3692,17 @@ export const DefaultApiFp = function(api: DefaultApi, configuration?: Configurat
         },
         /**
          * 
+         * @summary next_subscription_step <GET>
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getnativev1subscriptionnextStep(basePath: string, options?: any): Promise<NextSubscriptionStepRequest> {
+            const localVarFetchArgs = await DefaultApiFetchParamCreator(configuration).getnativev1subscriptionnextStep(options);
+            const response = await safeFetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options, api)
+            return handleGeneratedApiResponse(response)
+        },
+        /**
+         * 
          * @summary Generate a unique hash which will be used as an identifier for user profiling
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -4096,6 +4189,17 @@ export class DefaultApi extends BaseAPI {
     public async getnativev1subcategories(options?: any) {
         const functionalApi = DefaultApiFp(this, this.configuration)
         return functionalApi.getnativev1subcategories(this.basePath, options)
+    }
+    /**
+     * 
+     * @summary next_subscription_step <GET>
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public async getnativev1subscriptionnextStep(options?: any) {
+        const functionalApi = DefaultApiFp(this, this.configuration)
+        return functionalApi.getnativev1subscriptionnextStep(this.basePath, options)
     }
     /**
      * 
